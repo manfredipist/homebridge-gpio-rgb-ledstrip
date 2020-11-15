@@ -20,7 +20,7 @@
     "homebridge"
   ],
   "author": "Manfredi Pistone",
-  "license": "gpl-3.0",
+  "license": "GPL-3.0-only",
   "bugs": {
     "url": "https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip/issues"
   },
