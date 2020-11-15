@@ -18,6 +18,8 @@ To identify the correct pin configuration, have a look at the following layout
 
 ![pi-blaster pinout](https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip/blob/master/images/pinout.xyz.png?raw=true)
 
+P.S: if pi-blaster seems not to work (e.g running the command 'echo "$PIN=1" > /dev/pi-blaster' doesn't yield the desired output), try restarting manually the service with root privileges
+
 # Configuration
 
 Configuration sample:
@@ -37,7 +39,7 @@ Configuration sample:
 Fields:
 
 * "accessory": Must always be "SmartLedStrip" (required)
-* "name": Can be anything (required)
+* "name": Can be anything (required)ß
 * "rPin": GPIO pin that is used to set red value (required)
 * "gPin": GPIO pin that is used to set green value (required)
 * "bPin": GPIO pin that is used to set blue value (required)
