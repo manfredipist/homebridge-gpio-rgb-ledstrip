@@ -1,0 +1,39 @@
+{
+    "pluginAlias": "SmartLedStrip",
+    "pluginType": "accessory",
+    "headerDisplay": "[RPi](https://www.raspberrypi.org) GPIO based LED Strip plugin for [Homebridge](https://github.com/nfarina/homebridge).",
+    "footerDisplay": "Raise [Issues](https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip/issues) or submit [Pull Requests](https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip/pulls) on [Project Page](https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip).",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "title": "Name",
+                "type": "string",
+                "required": true,
+                "default": "SmartLedStrip",
+                "description": "A unique name for the accessory. It will be used as the accessory name in HomeKit."
+            },
+            "rPin": {
+                "title": "Red Pin",
+                "type": "integer",
+                "required": true,
+                "placeholder": 15,
+                "description": "GPIO pin that is used to set red value."
+            },
+            "gPin": {
+                "title": "Green Pin",
+                "type": "integer",
+                "required": true,
+                "placeholder": 13,
+                "description": "GPIO pin that is used to set green value."
+            },
+            "bPin": {
+                "title": "Blue Pin",
+                "type": "integer",
+                "required": true,
+                "placeholder": 11,
+                "description": "GPIO pin that is used to set blue value."
+            }
+        }
+    }
+}
