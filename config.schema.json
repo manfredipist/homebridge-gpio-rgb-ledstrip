@@ -17,21 +17,21 @@
                 "title": "Red Pin",
                 "type": "integer",
                 "required": true,
-                "placeholder": 15,
+                "placeholder": 27,
                 "description": "GPIO pin that is used to set red value."
             },
             "gPin": {
                 "title": "Green Pin",
                 "type": "integer",
                 "required": true,
-                "placeholder": 13,
+                "placeholder": 22,
                 "description": "GPIO pin that is used to set green value."
             },
             "bPin": {
                 "title": "Blue Pin",
                 "type": "integer",
                 "required": true,
-                "placeholder": 11,
+                "placeholder": 17,
                 "description": "GPIO pin that is used to set blue value."
             }
         }
