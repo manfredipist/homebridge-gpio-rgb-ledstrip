@@ -10,7 +10,7 @@ Originally inspired by [GiniaE/homebridge-gpio-ledstrip](https://github.com/Gini
 # Installation
 
 1. Install [pi-blaster](https://github.com/sarfata/pi-blaster).
-2. Update pi-blaster DAEMON_OPTS configuration under the path /etc/default/pi-blaster to enable your specific pin layout [instructions](https://github.com/sarfata/pi-blaster#warnings-and-other-caveats).
+2. Update pi-blaster DAEMON_OPTS configuration under the path /etc/default/pi-blaster to enable your specific pin layout ([instructions](https://github.com/sarfata/pi-blaster#warnings-and-other-caveats)).
 3. Install [homebridge-gpio-rgb-ledstrip] directly from Homebridge Plugin Page or by running sudo npm install -g homebridge-gpio-rgb-ledstrip.
 4. Update your configuration file. See sample config.json snippet below. Remember to use BCM GPIO layout.
 
@@ -43,5 +43,3 @@ Fields:
 * "rPin": GPIO pin that is used to set red value (required)
 * "gPin": GPIO pin that is used to set green value (required)
 * "bPin": GPIO pin that is used to set blue value (required)
-
-
