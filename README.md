@@ -39,7 +39,7 @@ Configuration sample:
 Fields:
 
 * "accessory": Must always be "SmartLedStrip" (required)
-* "name": Can be anything (required)ß
+* "name": Can be anything (required)
 * "rPin": GPIO pin that is used to set red value (required)
 * "gPin": GPIO pin that is used to set green value (required)
 * "bPin": GPIO pin that is used to set blue value (required)
