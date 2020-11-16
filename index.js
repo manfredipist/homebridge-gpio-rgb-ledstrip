@@ -2,8 +2,9 @@
 
 var Service, Characteristic;
 
-const piblaster = require('pi-blaster.js')
+const piblaster = require('pi-blaster.js');
 const converter = require('color-convert');
+const fs = require('fs');
 
 module.exports = function(homebridge) {
 	Service = homebridge.hap.Service;
@@ -23,7 +24,7 @@ function SmartLedStripAccessory(log, config) {
   if (!this.rPin) throw new Error("You must provide a config value for redPin.");
   if (!this.gPin) throw new Error("You must provide a config value for greenPin.");
   if (!this.bPin) throw new Error("You must provide a config value for bluePin.");
-  if (!statSync('/dev/pi-blaster').isFIFO()) throw new Error('/dev/pi-blaster is not a FIFO list, there\'s something wrong with your pi-blaster');
+  if (!fs.statSync('/dev/pi-blaster').isFIFO()) throw new Error('/dev/pi-blaster is not a FIFO list, there\'s something wrong with your pi-blaster');
 }
 
 SmartLedStripAccessory.prototype = {

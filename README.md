@@ -29,9 +29,9 @@ Configuration sample:
       {
         "accessory": "SmartLedStrip",
         "name": "Bedroom LedStrip",
-        "rPin": 15,
-        "gPin": 13,
-        "bPin": 11
+        "rPin": 22,
+        "gPin": 27,
+        "bPin": 17
       }
     ]
 ```
