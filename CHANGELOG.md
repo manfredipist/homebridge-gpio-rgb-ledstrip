@@ -1,5 +1,9 @@
 # Changelog
 
+
+## 0.0.4 (2020-11-16)
+-	**MISC**: console logging typo
+
 ## 0.0.3 (2020-11-16)
 -	**MISC**: different handling of exceptions to comply homebridge "verified status" requirements
 

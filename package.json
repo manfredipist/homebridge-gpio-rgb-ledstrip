@@ -1,7 +1,7 @@
 {
   "name": "homebridge-gpio-rgb-ledstrip",
   "description": "Raspberry Pi GPIO based LED Strip plugin for Homebridge",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
