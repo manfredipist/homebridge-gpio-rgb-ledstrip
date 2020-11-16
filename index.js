@@ -21,10 +21,23 @@ function SmartLedStripAccessory(log, config) {
   this.gPin     = config['gPin'];
   this.bPin     = config['bPin'];
 
-  if (!this.rPin) throw new Error("You must provide a config value for redPin.");
-  if (!this.gPin) throw new Error("You must provide a config value for greenPin.");
-  if (!this.bPin) throw new Error("You must provide a config value for bluePin.");
-  if (!fs.statSync('/dev/pi-blaster').isFIFO()) throw new Error('/dev/pi-blaster is not a FIFO list, there\'s something wrong with your pi-blaster');
+  if (!this.rPin) {
+    console.log("You must provide a config value for redPin. Default one will be used: 22");
+    this.rPin = 22;
+  }
+  if (!this.gPin) {
+    console.log("You must provide a config value for greenPin. Default one will be used: 17");
+    this.gPin = 17;
+  } 
+  if (!this.bPin) {
+    console.log("You must provide a config value for bluePin. Default one will be used: 27");
+    this.bPin = 27;
+  }
+  if (!fs.statSync('/dev/pi-blaster').isFIFO())
+  {
+    console.log("/dev/pi-blaster is not a FIFO list. There's something wrong with your pi-blaster instance!");
+    console.log("homebridge-gpio-rgb-ledstrip won't work untill you fix this problem");
+  }
 }
 
 SmartLedStripAccessory.prototype = {
