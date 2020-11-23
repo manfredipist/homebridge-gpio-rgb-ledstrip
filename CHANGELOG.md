@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.0.5 (2020-11-23)
+-	**MISC**: better handling of exceptions
 
 ## 0.0.4 (2020-11-16)
 -	**MISC**: console logging typo

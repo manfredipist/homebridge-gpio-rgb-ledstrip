@@ -1,7 +1,9 @@
 {
   "name": "homebridge-gpio-rgb-ledstrip",
   "description": "Raspberry Pi GPIO based LED Strip plugin for Homebridge",
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "author": "Manfredi Pistone",
+  "license": "GPL-3.0-only",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +12,10 @@
     "type": "git",
     "url": "git://github.com/ManfrediPist/homebridge-gpio-rgb-ledstrip.git"
   },
+  "bugs": {
+    "url": "https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip/issues"
+  },
+  "homepage": "https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip#readme",
   "keywords": [
     "homebridge-plugin",
     "gpio rgb ledstrip",
@@ -19,18 +25,12 @@
     "gpio",
     "homebridge"
   ],
-  "author": "Manfredi Pistone",
-  "license": "GPL-3.0-only",
-  "bugs": {
-    "url": "https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip/issues"
-  },
-  "homepage": "https://github.com/manfredipist/homebridge-gpio-rgb-ledstrip#readme",
   "engines": {
     "node": ">=10",
     "homebridge": ">=1.0.0"
   },
   "dependencies": {
-    "color-convert": ">=2.0.0",
-    "pi-blaster.js": ">=0.1.3"
+    "color-convert": "^2.0.0",
+    "pi-blaster.js": "^0.1.3"
   }
 }
