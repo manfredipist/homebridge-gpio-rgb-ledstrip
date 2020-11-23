@@ -10,10 +10,10 @@ module.exports = function(homebridge) {
 	Service = homebridge.hap.Service;
 	Characteristic = homebridge.hap.Characteristic;
 
-	homebridge.registerAccessory('homebridge-gpio-rgb-ledstrip', 'SmartRGBLedStrip', SmartRGBLedStripAccessory);
+	homebridge.registerAccessory('homebridge-gpio-rgb-ledstrip', 'SmartLedStrip', SmartLedStripAccessory);
 }
 
-function SmartRGBLedStripAccessory(log, config) {
+function SmartLedStripAccessory(log, config) {
   this.log      = log;
   this.name     = config['name'];
 
@@ -24,9 +24,9 @@ function SmartRGBLedStripAccessory(log, config) {
   this.enabled = true ;
 
   try {
-    if (!this.rPin) 
+    if (!this.rPin)
       throw new Error("rPin not set!")
-    if (!this.gPin) 
+    if (!this.gPin)
       throw new Error("gPin not set!")
     if (!this.bPin)
       throw new Error("bPin not set!")
@@ -37,10 +37,10 @@ function SmartRGBLedStripAccessory(log, config) {
     this.log("homebridge-gpio-rgb-ledstrip won't work until you fix this problem");
     this.enabled = false;
   }
-  
+
 }
 
-SmartRGBLedStripAccessory.prototype = {
+SmartLedStripAccessory.prototype = {
 
   getServices : function(){
 
@@ -51,36 +51,36 @@ SmartRGBLedStripAccessory.prototype = {
       .setCharacteristic(Characteristic.Manufacturer, 'Manfredi Pistone')
       .setCharacteristic(Characteristic.Model, 'GPIO-RGB-LedStrip')
       .setCharacteristic(Characteristic.SerialNumber, '06-06-00');
-  
+
       let smartLedStripService = new Service.Lightbulb(this.name);
-  
+
       smartLedStripService
           .getCharacteristic(Characteristic.On)
           .on('change',this.toggleState.bind(this));
-  
+
       smartLedStripService
           .addCharacteristic(new Characteristic.Brightness())
           .on('change',this.toggleState.bind(this));
-  
+
       smartLedStripService
           .addCharacteristic(new Characteristic.Hue())
           .on('change',this.toggleState.bind(this));
-  
+
       smartLedStripService
           .addCharacteristic(new Characteristic.Saturation())
           .on('change',this.toggleState.bind(this));
-  
+
       this.informationService = informationService;
       this.smartLedStripService = smartLedStripService;
-  
+
       this.log("Homebridge RGB LedStrip has been successfully initialized!");
-  
+
       return [informationService, smartLedStripService];
     }else{
       this.log("Homebridge RGB LedStrip has not been initialized, please check your logs..");
       return [];
     }
-    
+
   },
 
   isOn : function() {

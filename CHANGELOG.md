@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.0 (2020-11-23)
+-	**MISC**: better versioning
+
 ## 0.0.5 (2020-11-23)
 -	**MISC**: better handling of exceptions
 
