@@ -33,7 +33,7 @@ function SmartLedStripAccessory(log, config) {
     if (!fs.existsSync('/dev/pi-blaster'))
       throw new Error("/dev/pi-blaster does not exist!")
   } catch (err) {
-    this.log("An error has been thrown: " + err);
+    this.log("An error has been thrown! " + err);
     this.log("homebridge-gpio-rgb-ledstrip won't work until you fix this problem");
     this.enabled = false;
   }
@@ -73,11 +73,11 @@ SmartLedStripAccessory.prototype = {
       this.informationService = informationService;
       this.smartLedStripService = smartLedStripService;
 
-      this.log("Homebridge RGB LedStrip has been successfully initialized!");
+      this.log("SmartLedStrip has been successfully initialized!");
 
       return [informationService, smartLedStripService];
     }else{
-      this.log("Homebridge RGB LedStrip has not been initialized, please check your logs..");
+      this.log("SmartLedStrip has not been initialized, please check your logs..");
       return [];
     }
 
