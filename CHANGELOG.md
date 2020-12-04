@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 (2020-12-04)
+-	**MISC**: Added "verified by homebridge" badge and donate button
+
+## 0.1.1 (2020-11-26)
+-	**MISC**: minor improvements
+
 ## 0.1.0 (2020-11-23)
 -	**MISC**: better versioning
 

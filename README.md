@@ -1,4 +1,10 @@
 # homebridge-gpio-rgb-ledstrip
+
+[![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
+[![npm version](https://badge.fury.io/js/homebridge-gpio-rgb-ledstrip.svg)](https://badge.fury.io/js/homebridge-gpio-rgb-ledstrip)
+![npm](https://img.shields.io/npm/dw/homebridge-gpio-rgb-ledstrip)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=KLP7YU6F9HHTY)
+
 [RPi](https://www.raspberrypi.org) GPIO based LED Strip plugin for [Homebridge](https://github.com/nfarina/homebridge)
 
 Due to all the changes and updated that have occured in Homebridge since the original release of this plugin, i decided to replace its core to extend its usability and compatibility.
